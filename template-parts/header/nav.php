@@ -3,10 +3,6 @@
  * Displays the header nav.
  */
 
-if ( ! has_nav_menu( 'primary' ) ) {
-	return;
-}
-
 wp_nav_menu(
 	[
 		'theme_location'  => 'primary',
