@@ -1,10 +1,22 @@
 <?php
 /**
- * Last fallback for all views.
+ * Displays archive views.
  */
 
 get_header();
-
+?>
+<header class="archive-header">
+	<h1 class="archive-title">
+		<?php the_archive_title(); ?>
+	</h1>
+	<?php
+	$archive_description = get_the_archive_description();
+	if ( ! empty( $archive_description ) ) {
+		echo "<p class='archive-description'>$archive_description</p>";
+	}
+	?>
+</header>
+<?php
 if ( have_posts() ) {
 	while ( have_posts() ) {
 		the_post();

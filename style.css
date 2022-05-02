@@ -152,6 +152,10 @@ textarea:active {
 	transition: box-shadow 0.25s ease-in-out;
 }
 
+input:not([type='checkbox']):not([type='radio']):focus-visible {
+	outline: none;
+}
+
 input[type='submit']:hover {
 	cursor: pointer;
 }
@@ -171,6 +175,7 @@ img {
 }
 
 .site-header,
+.archive-header,
 .entry-header,
 .entry-content > *,
 .entry-footer,
@@ -184,6 +189,7 @@ img {
 
 @media screen and (min-width: 25em) {
 	.site-header,
+	.archive-header,
 	.entry-header,
 	.entry-content > *,
 	.entry-footer,
@@ -194,7 +200,7 @@ img {
 }
 .site-header {
 	padding-top: 2em;
-	padding-bottom: 1em;
+	padding-bottom: 2em;
 	text-align: center;
 }
 
@@ -244,7 +250,7 @@ img {
 	margin-top: 1em;
 }
 
-.hentry + .hentry {
+* + .hentry {
 	margin-top: 3em;
 }
 
@@ -275,6 +281,10 @@ img {
 .has-background > :last-child,
 .has-background > :last-child > :last-child {
 	margin-bottom: 0;
+}
+
+.searchform {
+	margin-top: 1em;
 }
 
 .entry-footer {
@@ -324,7 +334,7 @@ img {
 }
 
 .site-footer {
-	margin-top: 4em;
+	margin-top: 5em;
 	margin-bottom: 3em;
 	position: relative;
 }
