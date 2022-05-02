@@ -1,0 +1,341 @@
+@charset "UTF-8";
+
+/*
+Theme Name: WH Classic
+Theme URI: https://github.com/florianbrinkmann/wh-classic
+Author: You
+Description: Simple theme used to show how to create a classic theme.
+Requires at least: 6.0
+Tested up to: 6.0
+Requires PHP: 7.0
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: wh-classic
+*/
+
+:root {
+	--base-line-height: 1.4;
+	--font-size-h1: 2.027em;
+	--line-height-h1: 1.1;
+	--font-size-h2: 1.802em;
+	--line-height-h2: 1.2;
+	--font-size-h3: 1.602em;
+	--line-height-h3: 1.2;
+	--font-size-h4: 1.424em;
+	--line-height-h4: 1.2;
+	--font-size-h5: 1.266em;
+	--line-height-h5: 1.2;
+	--font-size-h6: 1em;
+	--line-height-h6: var(--base-line-height);
+	--font-size-small: 0.889em;
+}
+
+* {
+	color: inherit;
+	font-family: inherit;
+	box-sizing: border-box;
+}
+
+html {
+	font-family: 'IBM Plex Serif', serif;
+	font-size: 1.1em;
+	line-height: var(--base-line-height);
+}
+
+@media screen and (min-width: 35em) {
+	html {
+		font-size: 1.25em;
+	}
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 1em 0 0;
+}
+
+h1 {
+	font-size: var(--font-size-h1);
+	line-height: var(--line-height-h1);
+}
+
+h2 {
+	font-size: var(--font-size-h2);
+	line-height: var(--line-height-h2);
+}
+
+h3 {
+	font-size: var(--font-size-h3);
+	line-height: var(--line-height-h3);
+}
+
+h4 {
+	font-size: var(--font-size-h4);
+	line-height: var(--line-height-h4);
+}
+
+h5 {
+	font-size: var(--font-size-h5);
+	line-height: var(--line-height-h5);
+}
+
+h6 {
+	font-size: var(--font-size-h6);
+	line-height: var(--line-height-h6);
+}
+
+p {
+	margin: 0.75em 0 0;
+}
+
+ul,
+ol,
+figure,
+.wp-block-image,
+.wp-block-cover,
+.wp-block-columns,
+.wp-block-group,
+table {
+	margin: 1em 0;
+}
+
+figure {
+	display: block;
+}
+
+li + li,
+li > ul,
+li > ol {
+	margin: 0.25em 0 0;
+}
+
+a:hover,
+a:focus,
+a:active {
+	text-decoration: none;
+}
+
+img,
+figure,
+input,
+textarea {
+	max-width: 100%;
+}
+
+input,
+button,
+textarea,
+pre {
+	font-size: inherit;
+}
+
+input:not([type='checkbox']):not([type='radio']),
+textarea,
+button {
+	background-color: transparent;
+	border: 1px solid currentColor;
+	padding: 0.25em 0.75em 0.35em;
+	box-shadow: inset 2px 0 0 transparent;
+}
+
+input:not([type='checkbox']):not([type='radio']):hover,
+input:not([type='checkbox']):not([type='radio']):focus,
+input:not([type='checkbox']):not([type='radio']):active,
+textarea:hover,
+textarea:focus,
+textarea:active {
+	box-shadow: inset 2px 0 0 currentColor;
+	transition: box-shadow 0.25s ease-in-out;
+}
+
+input[type='submit']:hover {
+	cursor: pointer;
+}
+
+img {
+	height: auto;
+}
+
+.inverted-link-style a {
+	text-decoration: none;
+}
+
+.inverted-link-style a:hover,
+.inverted-link-style a:focus,
+.inverted-link-style a:active {
+	text-decoration: underline;
+}
+
+.site-header,
+.entry-header,
+.entry-content > *,
+.entry-footer,
+.comments-area,
+.site-footer {
+	width: calc(100% - 1rem);
+	max-width: 50ch;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+@media screen and (min-width: 25em) {
+	.site-header,
+	.entry-header,
+	.entry-content > *,
+	.entry-footer,
+	.comments-area,
+	.site-footer {
+		width: calc(100% - 2rem);
+	}
+}
+.site-header {
+	padding-top: 2em;
+	padding-bottom: 1em;
+	text-align: center;
+}
+
+.site-title {
+	font-size: 2em;
+	font-weight: 400;
+	line-height: 1.2;
+	margin: 0;
+	padding: 0;
+}
+
+.site-description {
+	font-style: italic;
+}
+
+.primary-menu {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1em;
+	justify-content: center;
+	list-style: none;
+	margin-top: 1.5em;
+	padding-left: 0;
+	position: relative;
+}
+
+.with-description + .primary-menu-container .primary-menu::before {
+	content: '';
+	background-color: currentColor;
+	position: absolute;
+	top: -0.25em;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 2em;
+	height: 1px;
+}
+
+.primary-menu li {
+	margin-top: 0.25em;
+}
+
+.primary-menu .current-menu-item > a {
+	text-decoration: underline;
+}
+
+.hentry {
+	margin-top: 1em;
+}
+
+.hentry + .hentry {
+	margin-top: 3em;
+}
+
+.entry-title {
+	margin-top: 0;
+}
+
+.entry-date {
+	margin-top: 0.125em;
+	font-style: italic;
+	font-size: var(--font-size-small);
+}
+
+.wp-block-image figcaption {
+	font-style: italic;
+	font-size: var(--font-size-small);
+}
+
+.has-background {
+	padding: 1rem;
+}
+
+.has-background > :first-child,
+.has-background > :first-child > :first-child {
+	margin-top: 0;
+}
+
+.has-background > :last-child,
+.has-background > :last-child > :last-child {
+	margin-bottom: 0;
+}
+
+.entry-footer {
+	font-style: italic;
+	margin-top: 1em;
+}
+
+.comments-area {
+	margin-top: 3em;
+}
+
+.reactions-list {
+	padding-left: 0;
+}
+
+.comment {
+	list-style: none;
+}
+
+.comment .comment,
+.comment + .comment {
+	margin-top: 2.5em;
+}
+
+.comment-author {
+	padding-left: calc(30px + 0.5em);
+}
+
+.comment-author img {
+	margin-left: calc(-30px - 0.5em);
+	margin-right: 0;
+	position: absolute;
+}
+
+.comment-author cite {
+	font-style: normal;
+}
+
+.comment-meta {
+	margin-top: 0.5em;
+	font-size: var(--font-size-small);
+	font-style: italic;
+}
+
+.comment .reply {
+	margin-top: 0.75em;
+}
+
+.site-footer {
+	margin-top: 4em;
+	margin-bottom: 3em;
+	position: relative;
+}
+
+.site-footer::before {
+	content: '';
+	background-color: currentColor;
+	position: absolute;
+	top: -1em;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 2em;
+	height: 1px;
+}
