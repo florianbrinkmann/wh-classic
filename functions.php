@@ -3,6 +3,16 @@
  * Functions file.
  */
 
+if ( ! function_exists( 'wh_classic_load_textdomain' ) ) {
+	/**
+	 * Load text domain.
+	 */
+	function wh_classic_load_textdomain() {
+		load_theme_textdomain( 'wh-classic', get_template_directory() . '/languages' );
+	}
+}
+add_action( 'after_setup_theme', 'wh_classic_load_textdomain' );
+
 if ( ! function_exists( 'wh_classic_add_theme_support' ) ) {
 	/**
 	 * Makes add_theme_support() calls.
@@ -16,11 +26,11 @@ if ( ! function_exists( 'wh_classic_add_theme_support' ) ) {
 				'unlink-homepage-logo' => true,
 			]
 		);
-	
+
 		add_theme_support( 'title-tag' );
 
 		add_theme_support( 'editor-styles' );
-	}	
+	}
 }
 add_action(
 	'after_setup_theme',
@@ -53,16 +63,18 @@ if ( ! function_exists( 'wh_classic_register_widgets_area' ) ) {
 	 */
 	function wh_classic_register_widgets_area() {
 		$heading = __( 'Footer widgets' );
-		register_sidebar( [
-			'name'           => __( 'Footer widgets area', 'wh-classic' ),
-			'id'             => 'footer-widgets-area',
-			'before_widget'  => '<aside id="%1$s" class="widget %2$s">',
-			'after_widget'   => "</aside>\n",	
-			'before_title'   => '<h3 class="widget-title">',
-			'after_title'    => '</h3>',
-			'before_sidebar' => "<footer class='site-footer'><h2 class='screen-reader-text'>$heading</h2>",
-			'after_sidebar'  => '</footer>'
-		] );
+		register_sidebar(
+			[
+				'name'           => __( 'Footer widgets area', 'wh-classic' ),
+				'id'             => 'footer-widgets-area',
+				'before_widget'  => '<aside id="%1$s" class="widget %2$s">',
+				'after_widget'   => "</aside>\n",
+				'before_title'   => '<h3 class="widget-title">',
+				'after_title'    => '</h3>',
+				'before_sidebar' => "<footer class='site-footer'><h2 class='screen-reader-text'>$heading</h2>",
+				'after_sidebar'  => '</footer>',
+			]
+		);
 	}
 }
 add_action(
@@ -84,7 +96,7 @@ if ( ! function_exists( 'wh_classic_add_logo_alt' ) ) {
 		if ( '' !== $alt ) {
 			return $attrs;
 		}
-	
+
 		$attrs['alt'] = get_bloginfo( 'name', 'display' );
 		return $attrs;
 	}
@@ -128,6 +140,11 @@ if ( ! function_exists( 'wh_classic_remove_more_link_scroll' ) ) {
 add_filter( 'the_content_more_link', 'wh_classic_remove_more_link_scroll' );
 
 if ( ! function_exists( 'wh_classic_add_fonts' ) ) {
+	/**
+	 * Prints style element that loads the font files.
+	 *
+	 * @return void
+	 */
 	function wh_classic_add_fonts() {
 		printf(
 			'<style>@font-face {
@@ -160,6 +177,11 @@ if ( ! function_exists( 'wh_classic_add_fonts' ) ) {
 add_action( 'wp_head', 'wh_classic_add_fonts' );
 
 if ( ! function_exists( 'wh_classic_enqueue_assets' ) ) {
+	/**
+	 * Enqueues assets like the stylesheet.
+	 *
+	 * @return void
+	 */
 	function wh_classic_enqueue_assets() {
 		wp_enqueue_style(
 			'wh-classic-style',
@@ -172,6 +194,11 @@ if ( ! function_exists( 'wh_classic_enqueue_assets' ) ) {
 add_action( 'wp_enqueue_scripts', 'wh_classic_enqueue_assets' );
 
 if ( ! function_exists( 'wh_classic_add_editor_style' ) ) {
+	/**
+	 * Adds a stylesheet to the editor.
+	 *
+	 * @return void
+	 */
 	function wh_classic_add_editor_style() {
 		add_editor_style( 'assets/css/editor.css' );
 	}

@@ -19,9 +19,10 @@
 	</div>
 	<footer class="entry-footer">
 		<p class="post-categories">
-			<?php 
+			<?php
 			_e( 'Categories: ', 'wh-classic' );
-			echo get_the_category_list( ', ' ); ?>
+			echo get_the_category_list( ', ' );
+			?>
 		</p>
 	</footer>
 </article>
