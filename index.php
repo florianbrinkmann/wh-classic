@@ -4,7 +4,12 @@
  */
 
 get_header();
-
+if ( is_home() && ! is_front_page() ) {
+	printf(
+		'<header class="screen-reader-text">%s</header>',
+		single_post_title( '', false )
+	);
+}
 if ( have_posts() ) {
 	while ( have_posts() ) {
 		the_post();

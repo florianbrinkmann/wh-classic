@@ -9,7 +9,7 @@ $shows_description = ! $has_custom_logo && ! empty( $site_description );
 ?>
 <div class="branding <?php echo $shows_description ? 'with-description' : ''; ?>">
 	<?php
-	$title_tag = is_home() ? 'h1' : 'p';
+	$title_tag = is_home() && is_front_page() ? 'h1' : 'p';
 	if ( $has_custom_logo ) {
 		$logo = get_custom_logo();
 		echo "<$title_tag class='site-logo'>$logo</$title_tag>";
