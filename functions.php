@@ -18,6 +18,8 @@ if ( ! function_exists( 'wh_classic_add_theme_support' ) ) {
 		);
 	
 		add_theme_support( 'title-tag' );
+
+		add_theme_support( 'editor-styles' );
 	}	
 }
 add_action(
@@ -168,3 +170,10 @@ if ( ! function_exists( 'wh_classic_enqueue_assets' ) ) {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'wh_classic_enqueue_assets' );
+
+if ( ! function_exists( 'wh_classic_add_editor_style' ) ) {
+	function wh_classic_add_editor_style() {
+		add_editor_style( 'assets/css/editor.css' );
+	}
+}
+add_action( 'admin_init', 'wh_classic_add_editor_style' );

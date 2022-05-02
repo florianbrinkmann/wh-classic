@@ -183,7 +183,7 @@ img {
 .comments-area,
 .site-footer {
 	width: calc(100% - 1rem);
-	max-width: 50ch;
+	max-width: 30rem;
 	margin-right: auto;
 	margin-left: auto;
 }
