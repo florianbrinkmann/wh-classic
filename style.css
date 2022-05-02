@@ -179,6 +179,7 @@ img {
 .entry-header,
 .entry-content > *,
 .entry-footer,
+.pagination,
 .comments-area,
 .site-footer {
 	width: calc(100% - 1rem);
@@ -193,6 +194,7 @@ img {
 	.entry-header,
 	.entry-content > *,
 	.entry-footer,
+	.pagination,
 	.comments-area,
 	.site-footer {
 		width: calc(100% - 2rem);
@@ -331,6 +333,22 @@ img {
 
 .comment .reply {
 	margin-top: 0.75em;
+}
+
+.pagination {
+	margin-top: 3em;
+}
+
+.page-numbers {
+	padding-left: 0;
+	list-style: none;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5rem;
+}
+
+.page-numbers li + li {
+	margin-top: 0;
 }
 
 .site-footer {
