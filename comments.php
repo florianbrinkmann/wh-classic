@@ -40,6 +40,7 @@ if ( post_password_required() ) {
 
 		$pings = wp_list_comments(
 			[
+				'echo'     => false,
 				'style'    => 'ul',
 				'type'     => 'pings',
 				'per_page' => ( isset( $comment_args['number'] ) ? $comment_args['number'] : - 1 ),
