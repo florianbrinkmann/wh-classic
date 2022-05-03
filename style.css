@@ -152,12 +152,26 @@ textarea:active {
 	transition: box-shadow 0.25s ease-in-out;
 }
 
-input:not([type='checkbox']):not([type='radio']):focus-visible {
+input:not([type='checkbox']):not([type='radio']):focus-visible,
+textarea:focus-visible {
 	outline: none;
 }
 
 input[type='submit']:hover {
 	cursor: pointer;
+}
+
+label {
+	display: block;
+}
+
+[type="checkbox"] + label {
+	display: initial;
+}
+
+label + input,
+label + textarea {
+	margin-top: 0.25em;
 }
 
 img {
@@ -302,7 +316,7 @@ img {
 	margin-bottom: 0;
 }
 
-.searchform {
+.search-form {
 	margin-top: 1em;
 }
 
@@ -342,7 +356,7 @@ img {
 	font-style: normal;
 }
 
-.comment-meta {
+.comment-metadata {
 	margin-top: 0.5em;
 	font-size: var(--font-size-small);
 	font-style: italic;
