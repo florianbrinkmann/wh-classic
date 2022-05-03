@@ -4,7 +4,7 @@
  */
 
 ?>
-<article <?php post_class( 'hentry' ); ?>>
+<article class="hentry">
 	<header class="entry-header">
 		<h1 class="entry-title">
 			<?php _e( 'No posts yet.', 'wh-classic' ); ?>
