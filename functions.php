@@ -155,30 +155,31 @@ if ( ! function_exists( 'wh_classic_add_fonts' ) ) {
 			  font-family: "IBM Plex Serif";
 			  font-style: normal;
 			  font-weight: 400;
-			  src: url( "%1$s/fonts/ibm-plex-serif-v15-latin-regular.woff2" ) format( "woff2" ),
-				   url( "%1$s/fonts/ibm-plex-serif-v15-latin-regular.woff" ) format( "woff" );
+			  src: url( "%1$s/ibm-plex-serif-v15-latin-regular.woff2" ) format( "woff2" ),
+				   url( "%1$s/ibm-plex-serif-v15-latin-regular.woff" ) format( "woff" );
 			}
 			
 			@font-face {
 			  font-family: "IBM Plex Serif";
 			  font-style: italic;
 			  font-weight: 400;
-			  src: url( "%1$s/fonts/ibm-plex-serif-v15-latin-italic.woff2 ") format( "woff2" ),
-				   url( "%1$s/fonts/ibm-plex-serif-v15-latin-italic.woff ") format( "woff" );
+			  src: url( "%1$s/ibm-plex-serif-v15-latin-italic.woff2 ") format( "woff2" ),
+				   url( "%1$s/ibm-plex-serif-v15-latin-italic.woff ") format( "woff" );
 			}
 			
 			@font-face {
 			  font-family: "IBM Plex Serif";
 			  font-style: normal;
 			  font-weight: 700;
-			  src: url( "%1$s/fonts/ibm-plex-serif-v15-latin-700.woff2 ") format( "woff2" ),
-				   url( "%1$s/fonts/ibm-plex-serif-v15-latin-700.woff ") format( "woff" );
+			  src: url( "%1$s/ibm-plex-serif-v15-latin-700.woff2 ") format( "woff2" ),
+				   url( "%1$s/ibm-plex-serif-v15-latin-700.woff ") format( "woff" );
 			}</style>',
-			get_theme_file_uri( 'assets' )
+			get_theme_file_uri( 'assets/fonts' )
 		);
 	}
 }
 add_action( 'wp_head', 'wh_classic_add_fonts' );
+add_action( 'enqueue_block_editor_assets', 'wh_classic_add_fonts' );
 
 if ( ! function_exists( 'wh_classic_enqueue_assets' ) ) {
 	/**

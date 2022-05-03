@@ -1,4 +1,5 @@
 .wp-block-post-title,
 .wp-block {
 	max-width: 30rem;
+	font-family: 'IBM Plex Serif', sans-serif;
 }
