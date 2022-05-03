@@ -1,6 +1,6 @@
 <?php
 /**
- * Displays archive views.
+ * Displays 404 error page.
  */
 
 get_header();
