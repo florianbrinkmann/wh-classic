@@ -1,6 +1,6 @@
 <?php
 /**
- * Displays 404 template.
+ * Displays hint that no post was found for a post list.
  */
 
 ?>
