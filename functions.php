@@ -31,6 +31,8 @@ if ( ! function_exists( 'wh_classic_add_theme_support' ) ) {
 
 		add_theme_support( 'automatic-feed-links' );
 
+		add_theme_support( 'post-thumbnails' );
+
 		add_theme_support( 'html5', [ 'comment-list', 'comment-form', 'search-form' ] );
 
 		add_theme_support( 'editor-styles' );

@@ -12,6 +12,12 @@
 			'<p class="entry-date">%s</p>',
 			get_the_date()
 		);
+		if ( has_post_thumbnail() ) {
+			printf(
+				'<figure class="post-thumbnail">%s</figure>',
+				get_the_post_thumbnail( null, 'large' )
+			);
+		}
 		?>
 	</header>
 	<div class="entry-content">
