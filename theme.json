@@ -1,0 +1,48 @@
+{
+    "$schema": "https://schemas.wp.org/wp/6.7/theme.json",
+    "version": 3,
+    "settings": {
+		"layout": {
+			"contentSize": "30rem",
+			"wideSize": "40rem"
+		},
+        "typography": {
+            "fontFamilies": [
+                {
+                    "fontFamily": "\"IBM Plex Serif\", serif",
+                    "name": "IBM Plex Serif",
+                    "slug": "ibm-plex-serif",
+                    "fontFace": [
+                        {
+                            "fontFamily": "IBM Plex Serif",
+                            "fontWeight": "400",
+                            "fontStyle": "normal",
+                            "fontStretch": "normal",
+                            "src": [
+                                "file:./assets/fonts/ibm-plex-serif-v15-latin-regular.woff2"
+                            ]
+                        },
+                        {
+                            "fontFamily": "IBM Plex Serif",
+                            "fontWeight": "700",
+                            "fontStyle": "normal",
+                            "fontStretch": "normal",
+                            "src": [
+                                "file:./assets/fonts/ibm-plex-serif-v15-latin-700.woff2"
+                            ]
+                        },
+                        {
+                            "fontFamily": "IBM Plex Serif",
+                            "fontWeight": "400",
+                            "fontStyle": "italic",
+                            "fontStretch": "normal",
+                            "src": [
+                                "file:./assets/fonts/ibm-plex-serif-v15-latin-italic.woff2"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

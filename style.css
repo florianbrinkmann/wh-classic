@@ -6,7 +6,7 @@ Theme URI: https://github.com/florianbrinkmann/wh-classic
 Author: Florian Brinkmann
 Description: Simple theme used to show how to create a classic theme.
 Requires at least: 6.0
-Tested up to: 6.0
+Tested up to: 6.7
 Requires PHP: 7.0
 Version: 1.0
 License: GNU General Public License v2 or later
@@ -249,7 +249,7 @@ img {
 	font-style: italic;
 }
 
-.primary-menu {
+.primary-menu > ul {
 	display: flex;
 	flex-wrap: wrap;
 	gap: 1em;
